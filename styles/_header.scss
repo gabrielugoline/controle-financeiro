@@ -1,0 +1,26 @@
+/* Header */
+
+header {
+
+  background-image: linear-gradient(to left bottom, #ff8f2f, #f07e24, #e16e19, #d15d0c, #c24d00);
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+
+  animation-name     : start;
+  animation-duration : .4s;
+  animation-delay    : .4s;
+  animation-fill-mode: backwards;
+
+  height: 30rem;
+  width : 100%;
+
+  padding: 2rem 2rem;
+
+  #logo {
+
+    margin: -5rem 0 0;
+
+    width: clamp(20rem, 40vw, 35rem);
+  }
+}

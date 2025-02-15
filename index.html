@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0a0e27" />
+  <meta name="msapplication-TileColor" content="#0a0e27" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="style.css">
+  <title>Economize | Gestão financeira simplificada </title>
+  <link rel="stylesheet" href="styles/app.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="shortcut icon" href="img/semfundo.png" type="image/x-icon"> 
+  <meta
+      name="description"
+      content="Gerencie suas finanças sem esforço com nosso aplicativo Economize. Organize, priorize e acompanhe suas finanças facilmente usando este aplicativo da web."/>
+    <meta name="keywords" content="Aplicativo Economize, gerenciamento de finanças, aplicativo Web, organizar seu dinheiro, rastrear gastos."/>
+</head>
+<body>
+  <div class="dev__main">
+    <header>
+      <img id="logo" src="img/semfundo.png" alt="logo">
+   </header>
+    <main>
+      <section class="summary animDown" id="balance">
+        <h2 class="sr_only"></h2>
+      
+        <div class="card total">
+          <h3><span>Total:</span><img src="img/total.svg" alt=""></h3>
+          <p id='totalView'></p>
+          <h1><span id="total">0.00</span></h1>
+        </div>
+      
+        <div class="card income">
+          <h3 class="card_header"><span> Entrada: </span><img src="img/income.svg" alt="imagem de entradas"></h3>
+          <span id="incomes">R$0.00</span>
+          <p id="incomeView"></p>
+        </div>
+      
+        <div class="card expense">
+          <h3 class="card_header"><span> Saida: </span><img src="img/expense.svg" alt="imagem de saida"></h3>
+          <span id="expenses">R$0.00</span>
+          <p id='expenseView'></p>
+        </div>
+      </section>
+
+
+
+      <section class="new-transaction">
+        <div class="card">
+          <h3>+ Nova Transação</h3>
+          <div class="field">
+            <label for="desc">Nome da Transação</label>
+            <input type="text" id="desc" />
+          </div>
+          <div class="field">
+            <label for="amount">Valor</label>
+            <input type="number" id="amount" />
+          </div>
+          <div class="field">
+            <label for="type">Tipo</label>
+            <select id="type">
+              <option>Entrada</option>
+              <option>Saída</option>
+            </select>
+          </div>
+          <button id="btnAdd" class="btn">Adicionar</button>
+        </div>
+      </section>
+
+
+      </script>
+
+      <section class="calendar">
+        <div class="cardlendar">
+          <h3>Calendário</h3>
+          <div class="field">
+            <label for="month">Mês</label>
+            <select id="month">
+              <option value="0">Janeiro</option>
+              <option value="1">Fevereiro</option>
+              <option value="2">Março</option>
+              <option value="3">Abril</option>
+              <option value="4">Maio</option>
+              <option value="5">Junho</option>
+              <option value="6">Julho</option>
+              <option value="7">Agosto</option>
+              <option value="8">Setembro</option>
+              <option value="9">Outubro</option>
+              <option value="10">Novembro</option>
+              <option value="11">Dezembro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="year">Ano</label>
+            <input type="number" id="year" value="2025"/>
+          </div>
+          <button id="btnLoad" class="btn">Carregar</button>
+        </div>
+      </section>
+
+
+
+
+      
+      <section class="transaction-table">
+        <div class="card">
+          <h3>Transações</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th class="column-amount">Valor</th>
+                <th class="column-type"> <span style="color: #0a0e27;">Tipo</span></th>
+                <th class="column-action">Excluir</th>
+              </tr>
+              
+            </thead>
+            <tbody>
+              <tr>
+                <td>Exemplo de Transação</td>
+                <td>R$ 100,00</td>
+                <td>Despesa</td>
+                <td class="column-action">
+                  <button class="delete-btn">
+                    <i class="fas fa-trash-alt"></i> Excluir
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

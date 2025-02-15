@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#total {
+    color: white;
+  }
+
+  #incomes {
+    font-size: 15px;
+    color: #0a0e27;
+    font-weight: bold;
+  }
+
+
+  #expenses {
+    font-size: 15px;
+    color: #0a0e27;
+    font-weight: bold;
+  }
+
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  color: #0a0e27;
+}
+
+
+.field {
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #0a0e27;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.field input, .field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  color: #0a0e27;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--primary-color);
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Efeito hover */
+.btn:hover {
+  background-color: #171c3a; /* Cor desejada ao passar o mouse */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Efeito ativo (quando clica) */
+.btn:active {
+  background-color: #171c3a; /* Manter a cor ao clicar */
+  transform: translateY(3px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Para deixar o botão desativado bonito */
+.btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+.cardlendar {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  color: #0a0e27;
+}
+
+
+.transaction-table {
+  margin-top: 10px;
+  max-height: 400px; /* altura fixa para permitir rolagem */
+  overflow-y: auto;
+}
+
+.transaction-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th, .transaction-table td {
+  text-align: left;
+  font-size: 13px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-table .column-type {
+  text-align: center;
+  color: red;
+}
+
+
+.transaction-table .column-action {
+  text-align: center;
+  
+}
+
+.transaction-table button.delete-btn {
+  background-color: #ff1900; /* Cor vermelha */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaçamento entre ícone e texto */
+}
+
+.transaction-table button.delete-btn:hover {
+  background-color: #c0392b; /* Cor mais escura ao passar o mouse */
+}
+
+.transaction-table i.fas.fa-trash-alt {
+  font-size: 16px; /* Ícone de lixeira */
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+body {
+  background-size: 100% 150%; /* Ajuste do tamanho do gradiente para telas menores */
+}
