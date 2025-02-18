@@ -13,20 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const expensesElem = document.querySelector("#expenses");
   const totalElem = document.querySelector("#total");
 
+  // Novo campo de data de vencimento
+  const dueDateInput = document.querySelector("#dueDate");
+
   let transactions = [];
 
+  // Adicionando a lógica para o botão "Adicionar"
   btnAdd.onclick = () => {
-    if (!descInput.value || !amountInput.value || !typeSelect.value) {
+    if (!descInput.value || !amountInput.value || !typeSelect.value || !dueDateInput.value) {
       return alert("Preencha todos os campos!");
     }
 
+    // Captura da data de vencimento
+    const dueDate = new Date(dueDateInput.value);
+
+    // Captura da data do mês e ano selecionado
     const date = new Date(yearInput.value, monthSelect.value);
 
     transactions.push({
       desc: descInput.value,
       amount: parseFloat(amountInput.value).toFixed(2),
       type: typeSelect.value,
-      date: date
+      date: date,
+      dueDate: dueDate // Agora estamos guardando a data de vencimento também
     });
 
     updateLocalStorage();
@@ -34,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resetInputs();
   };
 
+  // Carregar transações ao clicar no botão "Carregar"
   btnLoad.onclick = () => {
     renderTransactions();
   };
@@ -44,17 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTransactions();
   }
 
+  // Renderizando as transações
   function renderTransaction(transaction, index) {
     const tr = document.createElement("tr");
+
+    // Formatando a data de vencimento
+    const formattedDueDate = new Date(transaction.dueDate).toLocaleDateString('pt-BR');
 
     tr.innerHTML = `
       <td>${transaction.desc}</td>
       <td>R$ ${transaction.amount}</td>
-      <td class="column-type">${
-        transaction.type === "Entrada"
-          ? '<i class="bx bxs-chevron-up-circle"></i>'
-          : '<i class="bx bxs-chevron-down-circle"></i>'
-      }</td>
+      <td class="column-type">
+        ${transaction.type === "Entrada" ? '<i class="bx bxs-chevron-up-circle"></i>' : '<i class="bx bxs-chevron-down-circle"></i>'}
+      </td>
+      <td>${formattedDueDate}</td> <!-- Exibindo a data de vencimento -->
       <td class="column-action">
         <button class="delete-btn" data-index="${index}"><i class='bx bx-trash'></i></button>
       </td>
@@ -129,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
     descInput.value = "";
     amountInput.value = "";
     typeSelect.value = "";
+    dueDateInput.value = ""; // Limpando o campo de data de vencimento
   }
 
   renderTransactions();
 });
-

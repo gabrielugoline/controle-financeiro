@@ -30,7 +30,7 @@
         <h2 class="sr_only"></h2>
       
         <div class="card total">
-          <h3><span>Total:</span><img src="img/total.svg" alt=""></h3>
+          <h3><span>Saldo:</span><img src="img/total.svg" alt=""></h3>
           <p id='totalView'></p>
           <h1><span id="total">0.00</span></h1>
         </div>
@@ -68,16 +68,21 @@
               <option>Saída</option>
             </select>
           </div>
+        </div>
+        <div class="card">
+          <div class="field">
+            <label for="dueDate">Data de Vencimento</label>
+            <input type="date" id="dueDate" />
+          </div>
           <button id="btnAdd" class="btn">Adicionar</button>
         </div>
       </section>
-
-
       </script>
 
+      
       <section class="calendar">
         <div class="cardlendar">
-          <h3>Calendário</h3>
+          <h3>Carregar dados anteriores</h3>
           <div class="field">
             <label for="month">Mês</label>
             <select id="month">
@@ -109,13 +114,14 @@
       
       <section class="transaction-table">
         <div class="card">
-          <h3>Transações</h3>
+          <h3>Total de gastos no mês:</h3>
           <table>
             <thead>
               <tr>
                 <th>Nome</th>
                 <th class="column-amount">Valor</th>
                 <th class="column-type"> <span style="color: #0a0e27;">Tipo</span></th>
+                <th class="column-type"> <span style="color: #0a0e27;">Vencimento</span></th>
                 <th class="column-action">Excluir</th>
               </tr>
               
