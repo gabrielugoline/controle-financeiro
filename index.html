@@ -14,41 +14,34 @@
   <title>Economize | Gestão financeira simplificada </title>
   <link rel="stylesheet" href="styles/app.css">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
- <link rel="shortcut icon" href="img/semfundo.png" type="image/x-icon"> 
-  <meta
-      name="description"
-      content="Gerencie suas finanças sem esforço com nosso aplicativo Economize. Organize, priorize e acompanhe suas finanças facilmente usando este aplicativo da web."/>
-    <meta name="keywords" content="Aplicativo Economize, gerenciamento de finanças, aplicativo Web, organizar seu dinheiro, rastrear gastos."/>
+  <link rel="shortcut icon" href="img/semfundo.png" type="image/x-icon"> 
+  <meta name="description" content="Gerencie suas finanças sem esforço com nosso aplicativo Economize. Organize, priorize e acompanhe suas finanças facilmente usando este aplicativo da web."/>
+  <meta name="keywords" content="Aplicativo Economize, gerenciamento de finanças, aplicativo Web, organizar seu dinheiro, rastrear gastos."/>
 </head>
 <body>
   <div class="dev__main">
     <header>
       <img id="logo" src="img/semfundo.png" alt="logo">
-   </header>
+    </header>
     <main>
       <section class="summary animDown" id="balance">
         <h2 class="sr_only"></h2>
-      
         <div class="card total">
           <h3><span>Saldo:</span><img src="img/total.svg" alt=""></h3>
           <p id='totalView'></p>
           <h1><span id="total">0.00</span></h1>
         </div>
-      
         <div class="card income">
           <h3 class="card_header"><span> Entrada: </span><img src="img/income.svg" alt="imagem de entradas"></h3>
           <span id="incomes">R$0.00</span>
           <p id="incomeView"></p>
         </div>
-      
         <div class="card expense">
           <h3 class="card_header"><span> Saida: </span><img src="img/expense.svg" alt="imagem de saida"></h3>
           <span id="expenses">R$0.00</span>
           <p id='expenseView'></p>
         </div>
       </section>
-
-
 
       <section class="new-transaction">
         <div class="card">
@@ -71,15 +64,13 @@
         </div>
         <div class="card">
           <div class="field">
-            <label for="dueDate">Data de Vencimento</label>
+            <label for="dueDate">Data</label>
             <input type="date" id="dueDate" />
           </div>
           <button id="btnAdd" class="btn">Adicionar</button>
         </div>
       </section>
-      </script>
 
-      
       <section class="calendar">
         <div class="cardlendar">
           <h3>Carregar dados anteriores</h3>
@@ -100,18 +91,10 @@
               <option value="11">Dezembro</option>
             </select>
           </div>
-          <div class="field">
-            <label for="year">Ano</label>
-            <input type="number" id="year" value="2025"/>
-          </div>
           <button id="btnLoad" class="btn">Carregar</button>
         </div>
       </section>
 
-
-
-
-      
       <section class="transaction-table">
         <div class="card">
           <h3>Total de gastos no mês:</h3>
@@ -124,7 +107,6 @@
                 <th class="column-type"> <span style="color: #0a0e27;">Vencimento</span></th>
                 <th class="column-action">Excluir</th>
               </tr>
-              
             </thead>
             <tbody>
               <tr>
@@ -141,12 +123,8 @@
           </table>
         </div>
       </section>
-      
-
-
-
-
-
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>

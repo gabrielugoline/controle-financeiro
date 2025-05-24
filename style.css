@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  margin: 0;
+  padding: 0;
+  color: #0a0e27;
+}
+
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -17,57 +25,57 @@ header {
 }
 
 #total {
-    color: white;
-  }
+  color: #fff;
+  background-color: #0a0e27;
+  padding: 10px;
+  border-radius: 5px;
+}
 
-  #incomes {
-    font-size: 15px;
-    color: #0a0e27;
-    font-weight: bold;
-  }
-
-
-  #expenses {
-    font-size: 15px;
-    color: #0a0e27;
-    font-weight: bold;
-  }
-
+#incomes, #expenses {
+  font-size: 15px;
+  color: #0a0e27;
+  font-weight: bold;
+}
 
 .card {
   background-color: #fff;
   padding: 20px;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   color: #0a0e27;
+  margin-bottom: 20px;
 }
-
 
 .field {
   margin-bottom: 15px;
-  font-size: 13px;
-  color: #0a0e27;
+  font-size: 14px;
 }
 
 .field label {
   display: block;
   margin-bottom: 5px;
-  color: #000000;
+  color: #333;
 }
 
 .field input, .field select {
   width: 100%;
   padding: 10px;
   border: 1px solid #dedede;
-  border-radius: 2px;
+  border-radius: 5px;
   color: #0a0e27;
+  transition: border-color 0.3s;
+}
+
+.field input:focus, .field select:focus {
+  border-color: #0a0e27;
+  outline: none;
 }
 
 .btn {
   width: 100%;
   padding: 12px 16px;
-  background-color: var(--primary-color);
-  color: #000000;
+  background-color: #0a0e27;
+  color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -84,14 +92,14 @@ header {
 
 /* Efeito hover */
 .btn:hover {
-  background-color: #171c3a; /* Cor desejada ao passar o mouse */
+  background-color: #171c3a;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
 }
 
 /* Efeito ativo (quando clica) */
 .btn:active {
-  background-color: #171c3a; /* Manter a cor ao clicar */
+  background-color: #171c3a;
   transform: translateY(3px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -104,20 +112,17 @@ header {
   box-shadow: none;
 }
 
-
 .cardlendar {
   margin-top: 10px;
   background-color: #fff;
   padding: 20px;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  color: #0a0e27;
 }
-
 
 .transaction-table {
   margin-top: 10px;
-  max-height: 400px; /* altura fixa para permitir rolagem */
+  max-height: 400px;
   overflow-y: auto;
 }
 
@@ -128,7 +133,7 @@ header {
 
 .transaction-table th, .transaction-table td {
   text-align: left;
-  font-size: 13px;
+  font-size: 14px;
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
@@ -138,41 +143,34 @@ header {
   color: red;
 }
 
-
 .transaction-table .column-action {
   text-align: center;
-  
 }
 
 .transaction-table button.delete-btn {
-  background-color: #ff1900; /* Cor vermelha */
+  background-color: #ff1900;
   color: #fff;
   border: none;
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 4px; /* Bordas arredondadas */
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 5px; /* Espaçamento entre ícone e texto */
+  gap: 5px;
 }
 
 .transaction-table button.delete-btn:hover {
-  background-color: #c0392b; /* Cor mais escura ao passar o mouse */
+  background-color: #c0392b;
 }
 
 .transaction-table i.fas.fa-trash-alt {
-  font-size: 16px; /* Ícone de lixeira */
+  font-size: 16px;
 }
-
-
 
 /* Responsivo */
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
   }
-}
-body {
-  background-size: 100% 150%; /* Ajuste do tamanho do gradiente para telas menores */
 }
